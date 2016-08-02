@@ -1,3 +1,4 @@
 rootProject.name = 'tomcat-embedded'
 include 'tomcat-embedded-app'
+include 'tomcat-embedded-launcher'
 

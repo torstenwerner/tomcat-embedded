@@ -10,19 +10,15 @@ repositories {
 }
 
 configurations {
-    app
+    launcher
 }
 
 dependencies {
-    compile "org.apache.tomcat.embed:tomcat-embed-core:$tomcatVersion"
-
-    runtime "org.apache.tomcat.embed:tomcat-embed-logging-juli:$tomcatVersion",
-            "org.apache.tomcat.embed:tomcat-embed-jasper:$tomcatVersion",
-            project(':tomcat-embedded-app')
+    launcher project(':tomcat-embedded-launcher')
 }
 
 task startTomcat(type: JavaExec) {
-    classpath = sourceSets.main.runtimeClasspath
+    classpath = configurations.launcher
 
     main = 'xyz.its_me.TomcatLauncher'
 }

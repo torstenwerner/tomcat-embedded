@@ -1,0 +1,18 @@
+group 'xyz.its_me'
+version '0.1-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.apache.tomcat.embed:tomcat-embed-core:$tomcatVersion"
+
+    runtime "org.apache.tomcat.embed:tomcat-embed-logging-juli:$tomcatVersion",
+            "org.apache.tomcat.embed:tomcat-embed-jasper:$tomcatVersion",
+            project(':tomcat-embedded-app')
+}
