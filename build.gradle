@@ -9,9 +9,20 @@ repositories {
     mavenCentral()
 }
 
+configurations {
+    app
+}
+
 dependencies {
     compile "org.apache.tomcat.embed:tomcat-embed-core:$tomcatVersion"
 
     runtime "org.apache.tomcat.embed:tomcat-embed-logging-juli:$tomcatVersion",
-            "org.apache.tomcat.embed:tomcat-embed-jasper:$tomcatVersion"
+            "org.apache.tomcat.embed:tomcat-embed-jasper:$tomcatVersion",
+            project(':tomcat-embedded-app')
+}
+
+task startTomcat(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+
+    main = 'xyz.its_me.TomcatLauncher'
 }
