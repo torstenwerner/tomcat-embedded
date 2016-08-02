@@ -21,3 +21,8 @@ It has the necessary dependencies on tomcat-embedded.
 The root project defines a gradle task startTomcat to launch the app.
 
 The core idea is copied from https://devcenter.heroku.com/articles/create-a-java-web-application-using-embedded-tomcat and https://github.com/heroku/devcenter-embedded-tomcat .
+
+## Continuous Integration thanks to Snap CI
+
+Build image:https://snap-ci.com/torstenwerner/tomcat-embedded/branch/master/build_image[status]
+at link:https://snap-ci.com/torstenwerner/tomcat-embedded/branch/master[Snap CI]
