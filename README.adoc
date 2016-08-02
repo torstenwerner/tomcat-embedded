@@ -7,7 +7,7 @@ Just run the grade task startTomcat.
 ./gradlew startTomcat
 ----
 
-Open http://localhost:8008 and http://localhost:8080/hello in your browser.
+Open http://localhost:8080 and http://localhost:8080/hello in your browser.
 It will either show index.html or the HelloServlet output.
 Changes to index.html will be automatically active after a page reload.
 Changes to the servlet's source code need a rebuild and restart.
