@@ -11,13 +11,13 @@ Open http://localhost:8008 and http://localhost:8080/hello in your browser.
 It will either show index.html or the HelloServlet output.
 Changes to index.html will be automatically active after a page reload.
 Changes to the servlet's source code need a rebuild and restart.
-Jrebel will help with that issue.
+Jrebel can help with that issue.
 
 The root project contains the index.html and the HelloServlet class.
 It has a compile time dependency on javax.servlet-api for the servlet.
 
 The subproject tomcat-embedded-launcher contains the launcher class TomcatLauncher.
 It has the necessary dependencies on tomcat-embedded.
-The root project defines a gradle task startTomcat to launch to app.
+The root project defines a gradle task startTomcat to launch the app.
 
 The core idea is copied from https://devcenter.heroku.com/articles/create-a-java-web-application-using-embedded-tomcat and https://github.com/heroku/devcenter-embedded-tomcat .
