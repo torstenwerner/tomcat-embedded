@@ -13,7 +13,7 @@ public class HelloServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try (final ServletOutputStream out = resp.getOutputStream()) {
-            out.write("Hello from Servlet!!!".getBytes());
+            out.write("Hello from your beautiful Servlet!".getBytes());
             out.flush();
         }
     }
