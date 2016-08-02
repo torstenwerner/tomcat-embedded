@@ -21,7 +21,7 @@ public class TomcatLauncher {
 
         // Declare an alternative location for your "WEB-INF/classes" dir
         // Servlet 3.0 annotation will work
-        final File additionWebInfClasses = new File("tomcat-embedded-app/build/classes");
+        final File additionWebInfClasses = new File("build/classes");
         final WebResourceRoot resources = new StandardRoot(ctx);
         resources.addPreResources(
                 new DirResourceSet(resources, "/WEB-INF/classes", additionWebInfClasses.getAbsolutePath(), "/"));

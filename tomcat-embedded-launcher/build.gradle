@@ -13,6 +13,5 @@ dependencies {
     compile "org.apache.tomcat.embed:tomcat-embed-core:$tomcatVersion"
 
     runtime "org.apache.tomcat.embed:tomcat-embed-logging-juli:$tomcatVersion",
-            "org.apache.tomcat.embed:tomcat-embed-jasper:$tomcatVersion",
-            project(':tomcat-embedded-app')
+            "org.apache.tomcat.embed:tomcat-embed-jasper:$tomcatVersion"
 }
