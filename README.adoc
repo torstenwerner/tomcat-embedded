@@ -1,0 +1,6 @@
+# Sample Launcher of embedded Tomcat
+
+Just run the main function of class TomcatLauncher. Open http://localhost:8008 and http://localhost:8080/hello in your
+browser.
+It will either show index.html or the HelloServlet output.
+Changes to index.html will be automatically available on page reload.
