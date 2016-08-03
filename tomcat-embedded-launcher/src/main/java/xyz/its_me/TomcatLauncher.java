@@ -12,7 +12,7 @@ import java.nio.file.Path;
 
 public class TomcatLauncher {
     public static void main(String[] args) throws Exception {
-        String webappDirLocation = "src/main/webapp/";
+        final String webappDirLocation = "src/main/webapp/";
         final Tomcat tomcat = new Tomcat();
 
         final Path basePath = Files.createTempDirectory("tomcat-base-dir");
@@ -21,7 +21,7 @@ public class TomcatLauncher {
         tomcat.setPort(8080);
 
         final String webappPath = new File(webappDirLocation).getAbsolutePath();
-        StandardContext ctx = (StandardContext) tomcat.addWebapp("/", webappPath);
+        final StandardContext ctx = (StandardContext) tomcat.addWebapp("/", webappPath);
 
         // does not work, sorry
         ctx.setReloadable(true);
