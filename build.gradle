@@ -27,3 +27,10 @@ task startTomcat(type: JavaExec, dependsOn: 'classes') {
 
     main = 'xyz.its_me.TomcatLauncher'
 }
+
+test {
+    reports {
+        junitXml.enabled = true
+        html.enabled = true
+    }
+}
