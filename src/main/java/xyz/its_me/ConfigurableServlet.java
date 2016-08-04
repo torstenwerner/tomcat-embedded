@@ -7,22 +7,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.Properties;
+import java.util.UUID;
 
-@WebServlet(name = "HelloServlet", urlPatterns = {"/hello"})
-public class HelloServlet extends HttpServlet {
+@WebServlet(name = "ConfigurableServlet", urlPatterns = {"/uuid"})
+public class ConfigurableServlet extends HttpServlet {
+    private static UUID uuid = UUID.randomUUID();
+
+    public static void setUuid(UUID uuid) {
+        ConfigurableServlet.uuid = uuid;
+    }
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try (final ServletOutputStream out = resp.getOutputStream()) {
-            final InputStream messageStream = getClass().getResourceAsStream("message.properties");
-
-            final Properties messages = new Properties();
-            messages.load(messageStream);
-
-            final String welcome = messages.getProperty("welcome");
-
-            out.write(welcome.getBytes());
+            out.write(uuid.toString().getBytes());
             out.flush();
         }
     }
