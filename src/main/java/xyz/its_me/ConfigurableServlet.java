@@ -9,6 +9,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.UUID;
 
+/**
+ * Mimics a configurable servlet. Its state can be changed through a static setter. It is not threadsafe to keep the
+ * sample code simple.
+ */
 @WebServlet(name = "ConfigurableServlet", urlPatterns = {"/uuid"})
 public class ConfigurableServlet extends HttpServlet {
     private static UUID uuid = UUID.randomUUID();

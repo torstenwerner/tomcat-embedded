@@ -15,6 +15,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 public class TomcatTest {
+    // The test port should be a little bit random to avoid conflicts with other programs.
     private static final int PORT = 9273;
 
     @BeforeClass
